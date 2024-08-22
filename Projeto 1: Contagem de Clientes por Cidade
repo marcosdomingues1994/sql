@@ -1,0 +1,23 @@
+-- INIT database
+CREATE TABLE Clientes (
+  client_id INT, 
+  name VARCHAR(100), 
+  city VARCHAR(100)
+);
+
+INSERT INTO Clientes(client_id, name, city) VALUES 
+(1, 'Marcos', 'Curitiba'),
+(2, 'Bruno', 'Curitiba'),
+(3, 'Jordan', 'Michigan'),
+(4, 'Carlile', 'Madrid'),
+(5, 'Ahmed', 'Cairo'),
+(6, 'Bashar', 'Cairo'),
+(7, 'Larissa', 'Madrid');
+
+-- QUERY database
+SELECT 
+  city, 
+  COUNT(client_id) AS num_clientes 
+FROM Clientes
+
+GROUP BY city;
